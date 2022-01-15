@@ -1,0 +1,43 @@
+{
+  "root": "libs/team-red",
+  "sourceRoot": "libs/team-red/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:rollup",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/team-red",
+        "tsConfig": "libs/team-red/tsconfig.lib.json",
+        "project": "libs/team-red/package.json",
+        "entryFile": "libs/team-red/src/index.ts",
+        "external": ["react/jsx-runtime"],
+        "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
+        "compiler": "babel",
+        "assets": [
+          {
+            "glob": "libs/team-red/README.md",
+            "input": ".",
+            "output": "."
+          }
+        ]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/team-red/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/team-red"],
+      "options": {
+        "jestConfig": "libs/team-red/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

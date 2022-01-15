@@ -1,0 +1,28 @@
+{
+  "root": "apps/team-green-e2e",
+  "sourceRoot": "apps/team-green-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/team-green-e2e/cypress.json",
+        "devServerTarget": "team-green:storybook"
+      },
+      "configurations": {
+        "ci": {
+          "devServerTarget": "team-green:storybook:ci"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/team-green-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["team-green"]
+}

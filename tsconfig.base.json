@@ -14,7 +14,11 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@mono-repo-nx-example/core": ["libs/core/src/index.ts"],
+      "@mono-repo-nx-example/team-green": ["libs/team-green/src/index.ts"],
+      "@mono-repo-nx-example/team-red": ["libs/team-red/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

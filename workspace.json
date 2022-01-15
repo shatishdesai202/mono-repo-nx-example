@@ -1,7 +1,11 @@
 {
   "version": 2,
   "projects": {
+    "core": "libs/core",
     "main": "apps/main",
-    "main-e2e": "apps/main-e2e"
+    "main-e2e": "apps/main-e2e",
+    "team-green": "libs/team-green",
+    "team-green-e2e": "apps/team-green-e2e",
+    "team-red": "libs/team-red"
   }
 }
